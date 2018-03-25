@@ -21,7 +21,7 @@ Enemy.prototype.update = function(dt) {
     if (this.x > 605) {
         this.x = -120;
         this.speed = 80 + Math.random() * 400;
-    };
+    }
     // Collision with the Hero, sets the Hero back to starting Position
     if (player.x < this.x + 45 &&
         player.x + 35 > this.x &&
@@ -53,7 +53,7 @@ Hero.prototype.update = function(dt) {
         this.y = 400;
         bolder.x = Math.floor(Math.random() * 5) * 101;
         bolder.y = -17;
-    };
+    }
 };
 
 Hero.prototype.render = function() {
@@ -97,14 +97,14 @@ Rock.prototype.update = function() {
 // Now instantiate your objects.
 var bugOne = new Enemy(-100, 60, 80 + Math.random() * 450);
 var bugtwo = new Enemy(-100, 145, 80 + Math.random() * 450);
-var bugthree = new Enemy(-100, 225, 80 + Math.random() * 450)
+var bugthree = new Enemy(-100, 225, 80 + Math.random() * 450);
 var bugfour = new Enemy(-350, 60, 80 + Math.random() * 450);
 var bugfive = new Enemy(-350, 145, 80 + Math.random() * 450);
-var bugsix = new Enemy(-350, 225, 80 + Math.random() * 450)
+var bugsix = new Enemy(-350, 225, 80 + Math.random() * 450);
 // Place all enemy objects in an array called allEnemies
 var allEnemies = [bugOne, bugtwo, bugthree, bugfour, bugfive, bugsix];
 // Place the player object in a variable called player
-var player = new Hero;
+var player = new Hero();
 //Rock placed outside the screen
 var bolder = new Rock(-100, -100);
 
