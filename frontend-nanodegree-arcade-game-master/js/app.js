@@ -40,7 +40,7 @@ Enemy.prototype.render = function() {
 
 // Now write your own player class
 var Hero = function() {
-    this.x = 202;
+    this.x = 200;
     this.y = 400;
     this.sprite = 'images/char-boy.png';
 };
@@ -48,10 +48,10 @@ var Hero = function() {
 // If the Player reaches the Water set him back to Starting position
 // Place a Rock into the water to block one Path
 Hero.prototype.update = function(dt) {
-    if (player.y < 40 && bolder.x !== player.x) {
-        player.x = 202;
-        player.y = 400;
-        bolder.x = Math.ceil(Math.random() * 5) * 101;
+    if (this.y < 40 && bolder.x !== this.x) {
+        this.x = 202;
+        this.y = 400;
+        bolder.x = Math.floor(Math.random() * 5) * 101;
         bolder.y = -17;
     };
 };
